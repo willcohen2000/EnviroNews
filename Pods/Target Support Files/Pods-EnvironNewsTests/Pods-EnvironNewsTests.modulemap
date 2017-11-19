@@ -1,0 +1,6 @@
+framework module Pods_EnvironNewsTests {
+  umbrella header "Pods-EnvironNewsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
