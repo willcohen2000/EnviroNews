@@ -8,6 +8,12 @@ target 'EnvironNews' do
   # Pods for EnvironNews
 
   pod 'Alamofire'
+  pod ‘Firebase/Core’
+  pod ‘Firebase/Auth’
+  pod ‘Firebase/Database’
+  pod ‘Firebase/Storage’
+  pod ‘SwiftKeychainWrapper’
+  pod 'IQKeyboardManagerSwift'
 
 
   target 'EnvironNewsTests' do
