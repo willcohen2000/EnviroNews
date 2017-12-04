@@ -11,12 +11,23 @@ import UIKit
 class LandingPageController: UIViewController {
     
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var welcomeLabel: UILabel!
+    @IBOutlet weak var enviroNewsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad();
         backgroundView.backgroundColor = Colors.offWhiteColor;
+        intializeTexts();
     }
     
+    private func intializeTexts() {
+        welcomeLabel.font = UIFont(name: "Roboto-Regular", size: 40);
+        welcomeLabel.textColor = Colors.offBlackColor;
+        welcomeLabel.text = "Welcome to";
+        enviroNewsLabel.font = UIFont(name: "Roboto-Medium", size: 40);
+        enviroNewsLabel.textColor = Colors.centralGreenColor;
+        enviroNewsLabel.text = "EnviroNews";
+    }
 
     
 }
