@@ -10,32 +10,13 @@ import UIKit
 
 class LandingPageController: UIViewController {
     
-    @IBOutlet var emailTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var logInButton: UIButton!
+    @IBOutlet weak var backgroundView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        initializeView();
+        backgroundView.backgroundColor = Colors.offWhiteColor;
     }
     
-    @IBAction func logInButtonPressed(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func createAccountButtonPressed(_ sender: Any) {
-        
-    }
-    
-    @IBAction func forgotPasswordButtonPressed(_ sender: Any) {
-        
-    }
-    
-    private func initializeView() {
-        Customization.loginTextFieldCustomization(TF: emailTextField);
-        Customization.loginTextFieldCustomization(TF: passwordTextField);
-        logInButton.layer.cornerRadius = logInButton.frame.height / 2;
-    }
 
     
 }

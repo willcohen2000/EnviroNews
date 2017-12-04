@@ -24,6 +24,7 @@
 		6E39CC0B1FC1404300304D82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E39CC091FC1404300304D82 /* Main.storyboard */; };
 		6E39CC0C1FC1404300304D82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E39CC0A1FC1404300304D82 /* LaunchScreen.storyboard */; };
 		6ED49CCB1FD5949C003E0E69 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED49CCA1FD5949C003E0E69 /* Colors.swift */; };
+		6ED49CCD1FD596F4003E0E69 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6ED49CCC1FD596F3003E0E69 /* GoogleService-Info.plist */; };
 		AD647618E1D8C13ABDA6FBBF /* Pods_EnvironNewsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AE957E6BDA44C0DBFC80B04 /* Pods_EnvironNewsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		6E39CC091FC1404300304D82 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = EnvironNews/Rescources/Main.storyboard; sourceTree = SOURCE_ROOT; };
 		6E39CC0A1FC1404300304D82 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = EnvironNews/Rescources/LaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		6ED49CCA1FD5949C003E0E69 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6ED49CCC1FD596F3003E0E69 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		791B8E46DFB5455A44330FE0 /* Pods_EnvironNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EnvironNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE9B6A7F6161000702687DA /* Pods-EnvironNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvironNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-EnvironNews/Pods-EnvironNews.release.xcconfig"; sourceTree = "<group>"; };
 		CBD79CF9D3E25C06ED615E6D /* Pods-EnvironNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EnvironNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EnvironNews/Pods-EnvironNews.debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 		6E2E7C011FBF2D48000D935A /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				6ED49CCC1FD596F3003E0E69 /* GoogleService-Info.plist */,
 				6E2E7C051FBF2DBA000D935A /* AppDelegate.swift */,
 				6E2E7C061FBF2DBA000D935A /* EnvironNews.xcdatamodeld */,
 				6E2E7C041FBF2DB9000D935A /* EnvironNews-Bridging-Header.h */,
@@ -372,6 +375,7 @@
 			files = (
 				6E39CC0B1FC1404300304D82 /* Main.storyboard in Resources */,
 				6E39CC0C1FC1404300304D82 /* LaunchScreen.storyboard in Resources */,
+				6ED49CCD1FD596F4003E0E69 /* GoogleService-Info.plist in Resources */,
 				6E39CBFE1FBF30A500304D82 /* Roboto-Thin.ttf in Resources */,
 				6E2E7C0D1FBF2DC1000D935A /* Assets.xcassets in Resources */,
 				6E39CC001FBF30A500304D82 /* Roboto-Light.ttf in Resources */,

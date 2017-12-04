@@ -11,8 +11,8 @@ import UIKit
 
 class Colors {
     
-    let offWhiteColor = UIColor(red:0.85, green:0.85, blue:0.83, alpha:1.0);
-    let centralGreenColor = UIColor(red:0.15, green:0.65, blue:0.36, alpha:1.0);
+    static let offWhiteColor = UIColor(red:0.85, green:0.85, blue:0.83, alpha:1.0);
+    static let centralGreenColor = UIColor(red:0.15, green:0.65, blue:0.36, alpha:1.0);
     
     static func hexToUIColor(hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased();
