@@ -39,25 +39,37 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0IW-e1-EfM">
-                                        <rect key="frame" x="100" y="562" width="175" height="45"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdF-B1-Bty">
+                                        <rect key="frame" x="48" y="560" width="279" height="57"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="45" id="Bgv-dp-Q8O"/>
-                                            <constraint firstAttribute="width" constant="175" id="wXT-By-uSX"/>
+                                            <constraint firstAttribute="width" constant="279" id="A9x-s7-BYg"/>
+                                            <constraint firstAttribute="height" constant="57" id="JPd-X1-lc5"/>
                                         </constraints>
-                                        <state key="normal" image="Continue"/>
+                                        <state key="normal" image="Sign In With Google"/>
+                                        <connections>
+                                            <action selector="signInWithGoogleButtonPressed:" destination="jTW-0k-2pC" eventType="touchUpInside" id="ocN-pd-HaE"/>
+                                        </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="YaB-H8-3fL">
+                                        <rect key="frame" x="67.5" y="269.5" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="240" id="SWO-8e-wHf"/>
+                                            <constraint firstAttribute="height" constant="128" id="cT5-2w-vFV"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="FdF-B1-Bty" secondAttribute="bottom" constant="50" id="5VI-Cs-lWL"/>
                                     <constraint firstItem="vOB-Ub-TgU" firstAttribute="top" secondItem="2z6-JV-8RX" secondAttribute="top" constant="30" id="7aA-Nn-uoh"/>
+                                    <constraint firstItem="FdF-B1-Bty" firstAttribute="centerX" secondItem="2z6-JV-8RX" secondAttribute="centerX" id="Kzc-kl-7yW"/>
                                     <constraint firstItem="sYe-TO-pch" firstAttribute="top" secondItem="vOB-Ub-TgU" secondAttribute="bottom" id="NSR-ym-tO5"/>
                                     <constraint firstItem="vOB-Ub-TgU" firstAttribute="leading" secondItem="2z6-JV-8RX" secondAttribute="leading" constant="30" id="O08-Ex-ej5"/>
-                                    <constraint firstAttribute="bottom" secondItem="0IW-e1-EfM" secondAttribute="bottom" constant="60" id="Qtg-Hb-ldz"/>
-                                    <constraint firstItem="0IW-e1-EfM" firstAttribute="centerX" secondItem="2z6-JV-8RX" secondAttribute="centerX" id="ZQq-NA-DqB"/>
+                                    <constraint firstItem="YaB-H8-3fL" firstAttribute="centerY" secondItem="2z6-JV-8RX" secondAttribute="centerY" id="fiG-eB-AV6"/>
                                     <constraint firstItem="sYe-TO-pch" firstAttribute="leading" secondItem="2z6-JV-8RX" secondAttribute="leading" constant="30" id="jyu-Yl-rIr"/>
                                     <constraint firstAttribute="trailing" secondItem="sYe-TO-pch" secondAttribute="trailing" constant="10" id="oDb-yS-pQG"/>
                                     <constraint firstAttribute="trailing" secondItem="vOB-Ub-TgU" secondAttribute="trailing" constant="10" id="otf-Zm-G70"/>
+                                    <constraint firstItem="YaB-H8-3fL" firstAttribute="centerX" secondItem="2z6-JV-8RX" secondAttribute="centerX" id="qnb-Ft-TUa"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -73,6 +85,7 @@
                     <connections>
                         <outlet property="backgroundView" destination="2z6-JV-8RX" id="t7B-Ob-tQE"/>
                         <outlet property="enviroNewsLabel" destination="sYe-TO-pch" id="N78-X7-252"/>
+                        <outlet property="googleSignInButton" destination="FdF-B1-Bty" id="gXy-3t-q3n"/>
                         <outlet property="welcomeLabel" destination="vOB-Ub-TgU" id="GMq-Rm-Xi5"/>
                     </connections>
                 </viewController>
@@ -82,6 +95,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Continue" width="301" height="81"/>
+        <image name="Logo-1" width="807" height="588"/>
+        <image name="Sign In With Google" width="404" height="85"/>
     </resources>
 </document>

@@ -6,16 +6,20 @@
 //  Copyright © 2017 Will Cohen. All rights reserved.
 //
 
-import UIKit
+import UIKit;
+import Firebase;
+import GoogleSignIn;
 
-class LandingPageController: UIViewController {
+class LandingPageController: UIViewController, GIDSignInUIDelegate {
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var enviroNewsLabel: UILabel!
+    @IBOutlet weak var googleSignInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        GIDSignIn.sharedInstance().uiDelegate = self;
         backgroundView.backgroundColor = Colors.offWhiteColor;
         intializeTexts();
     }
@@ -29,5 +33,22 @@ class LandingPageController: UIViewController {
         enviroNewsLabel.text = "EnviroNews";
     }
 
+    @IBAction func signInWithGoogleButtonPressed(_ sender: Any) {
+        GIDSignIn.sharedInstance().signIn();
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print(error.localizedDescription);
+            return;
+        }
+        
+        let authentication = user.authentication;
+        print("Access token:", authentication?.accessToken!);
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
     
 }
