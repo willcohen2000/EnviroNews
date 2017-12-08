@@ -10,7 +10,7 @@ import UIKit;
 import Firebase;
 import GoogleSignIn;
 
-class LandingPageController: UIViewController, GIDSignInUIDelegate {
+class LandingPageController: UIViewController {
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var welcomeLabel: UILabel!
@@ -19,7 +19,6 @@ class LandingPageController: UIViewController, GIDSignInUIDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        GIDSignIn.sharedInstance().uiDelegate = self;
         backgroundView.backgroundColor = Colors.offWhiteColor;
         intializeTexts();
     }
@@ -34,21 +33,8 @@ class LandingPageController: UIViewController, GIDSignInUIDelegate {
     }
 
     @IBAction func signInWithGoogleButtonPressed(_ sender: Any) {
-        GIDSignIn.sharedInstance().signIn();
+    
     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print(error.localizedDescription);
-            return;
-        }
-        
-        let authentication = user.authentication;
-        print("Access token:", authentication?.accessToken!);
-    }
-    
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
-        
-    }
     
 }

@@ -14,7 +14,6 @@ target 'EnvironNews' do
   pod ‘Firebase/Storage’
   pod ‘SwiftKeychainWrapper’
   pod 'IQKeyboardManagerSwift'
-  pod 'GoogleSignIn'
 
 
   target 'EnvironNewsTests' do

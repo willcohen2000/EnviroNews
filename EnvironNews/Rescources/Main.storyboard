@@ -87,11 +87,27 @@
                         <outlet property="enviroNewsLabel" destination="sYe-TO-pch" id="N78-X7-252"/>
                         <outlet property="googleSignInButton" destination="FdF-B1-Bty" id="gXy-3t-q3n"/>
                         <outlet property="welcomeLabel" destination="vOB-Ub-TgU" id="GMq-Rm-Xi5"/>
+                        <segue destination="TsF-dD-3Ti" kind="show" identifier="toMain" id="a0D-LU-Mmy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n3V-mi-5lQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1010.4" y="301.79910044977515"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6eM-AH-v7p">
+            <objects>
+                <viewController id="TsF-dD-3Ti" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="quL-Hl-ERU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="yOe-JI-osZ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UwN-El-kBJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-290" y="302"/>
         </scene>
     </scenes>
     <resources>
