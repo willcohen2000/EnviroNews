@@ -46,6 +46,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
                 return;
             }
             print("@willcohen Successfully logged into Firebase [Google]");
+            self.window?.rootViewController?.performSegue(withIdentifier: "toMain", sender: nil);
         }
     }
 
