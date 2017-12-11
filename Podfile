@@ -16,6 +16,7 @@ target 'EnvironNews' do
   pod 'IQKeyboardManagerSwift'
   pod ‘GoogleSignIn’
   pod 'GMStepper'
+  pod 'SwiftyJSON'
 
 
   target 'EnvironNewsTests' do
