@@ -134,6 +134,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.31843709945678711" green="0.64177727699279785" blue="0.38435539603233337" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="A3B-hX-unC" kind="relationship" relationship="viewControllers" id="1UU-UP-I8X"/>
