@@ -20,9 +20,9 @@ class CustomTabBar: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
-        (tabBar.items![0]).selectedImage = UIImage(named: "BookFilled")?.withRenderingMode(.alwaysOriginal);
-        (tabBar.items![1]).selectedImage = UIImage(named: "AccountFilled")?.withRenderingMode(.alwaysOriginal);
-        (tabBar.items![2]).selectedImage = UIImage(named: "SettingsFilled")?.withRenderingMode(.alwaysOriginal);
+        (tabBar.items![0]).selectedImage = UIImage(named: "FeedIcon")?.withRenderingMode(.alwaysOriginal);
+        (tabBar.items![1]).selectedImage = UIImage(named: "TrendingIcon")?.withRenderingMode(.alwaysOriginal);
+        (tabBar.items![2]).selectedImage = UIImage(named: "ForumIcon")?.withRenderingMode(.alwaysOriginal);
         
         
         tabBar.unselectedItemTintColor = UIColor.white;

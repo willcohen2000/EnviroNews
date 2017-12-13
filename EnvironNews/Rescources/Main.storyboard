@@ -110,7 +110,23 @@
             </objects>
             <point key="canvasLocation" x="622" y="633"/>
         </scene>
-        <!--Item 1-->
+        <!--Item-->
+        <scene sceneID="f3g-kq-3kA">
+            <objects>
+                <viewController id="GlY-YK-0Eo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ca7-iq-8Vc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="KK8-lR-mD8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="muc-yS-EZR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nxv-3q-7oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1412" y="394"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="sfX-dE-SUd">
             <objects>
                 <viewController id="A3B-hX-unC" sceneMemberID="viewController">
@@ -120,17 +136,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="8Vf-Kf-Giy"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Hat-9Q-OBu"/>
+                    <tabBarItem key="tabBarItem" title="" id="Hat-9Q-OBu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf1-7m-8Id" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="620" y="-32"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Custom Tab Bar-->
         <scene sceneID="zx9-dB-Bx2">
             <objects>
-                <tabBarController id="IwN-yH-fT1" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vvz-94-C8l">
+                <tabBarController id="IwN-yH-fT1" customClass="CustomTabBar" customModule="EnvironNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vvz-94-C8l" customClass="cust">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -139,6 +155,7 @@
                     <connections>
                         <segue destination="A3B-hX-unC" kind="relationship" relationship="viewControllers" id="1UU-UP-I8X"/>
                         <segue destination="u3A-KZ-ADh" kind="relationship" relationship="viewControllers" id="0xz-bR-DZc"/>
+                        <segue destination="GlY-YK-0Eo" kind="relationship" relationship="viewControllers" id="xGg-wj-9Vh"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c5P-R1-tVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
