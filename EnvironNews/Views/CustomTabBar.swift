@@ -26,7 +26,8 @@ class CustomTabBar: UITabBarController {
         
         
         tabBar.unselectedItemTintColor = UIColor.white;
-        tabBar.barTintColor = UIColor.white;
+        tabBar.backgroundColor = Colors.centralGreenColor;
+        //tabBar.barTintColor = UIColor.white;
         UITabBar.appearance().shadowImage = UIImage();
         UITabBar.appearance().backgroundImage = UIImage();
         self.selectedIndex = 2;

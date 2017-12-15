@@ -45,12 +45,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
                 print("@willcohen Error creating a Firebase user [Google]", error);
                 return;
             }
-            print("@willcohen Successfully logged into Firebase [Google]");
-            self.window?.rootViewController?.performSegue(withIdentifier: "toMain", sender: nil);
-            print("bruh");
+            self.getNewsAPIKey(completionHandler: { (success) in
+                if (success) {
+                    print("@willcohen Successfully logged into Firebase [Google]");
+                    self.window?.rootViewController?.performSegue(withIdentifier: "toMain", sender: nil);
+                } else {
+                    print("Error trying to get API key.");
+                }
+            })
         }
     }
 
+    func getNewsAPIKey(completionHandler: @escaping (_ success: Bool) -> Void) {
+        let APIReference = Database.database().reference().child("App");
+        APIReference.observeSingleEvent(of: .value, with: { (snapshot) in
+            if let value = snapshot.value as? NSDictionary {
+                App.sharedInstance.NewsAPIKey = "\(value["Key"]!)"
+                completionHandler(true);
+            } else {
+                completionHandler(false);
+            }
+        })
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

@@ -94,7 +94,7 @@
             </objects>
             <point key="canvasLocation" x="-1010.4" y="301.79910044977515"/>
         </scene>
-        <!--Item 2-->
+        <!--View Controller-->
         <scene sceneID="Z2i-dR-xVd">
             <objects>
                 <viewController id="u3A-KZ-ADh" sceneMemberID="viewController">
@@ -104,13 +104,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="WDS-Ed-EC4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Mhz-IJ-vP0"/>
+                    <tabBarItem key="tabBarItem" title="" image="TrendingIcon" id="Mhz-IJ-vP0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyI-xC-EDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="622" y="633"/>
         </scene>
-        <!--Item-->
+        <!--View Controller-->
         <scene sceneID="f3g-kq-3kA">
             <objects>
                 <viewController id="GlY-YK-0Eo" sceneMemberID="viewController">
@@ -120,23 +120,68 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="KK8-lR-mD8"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="muc-yS-EZR"/>
+                    <tabBarItem key="tabBarItem" title="" image="ForumIcon" id="muc-yS-EZR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nxv-3q-7oy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1412" y="394"/>
         </scene>
-        <!--View Controller-->
+        <!--Main News Feed-->
         <scene sceneID="sfX-dE-SUd">
             <objects>
-                <viewController id="A3B-hX-unC" sceneMemberID="viewController">
+                <viewController id="A3B-hX-unC" customClass="MainNewsFeed" customModule="EnvironNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Lid-TA-I75">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yW-pV-zb8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="z7c-1U-oKR">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cCl-ii-0Ft">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zjP-It-OrB">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </view>
+                                            </collectionViewCell>
+                                        </cells>
+                                    </collectionView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="z7c-1U-oKR" secondAttribute="bottom" id="76j-hW-1tS"/>
+                                    <constraint firstAttribute="trailing" secondItem="z7c-1U-oKR" secondAttribute="trailing" id="MjA-TU-KLu"/>
+                                    <constraint firstItem="z7c-1U-oKR" firstAttribute="top" secondItem="9yW-pV-zb8" secondAttribute="top" id="ya0-eV-4NH"/>
+                                    <constraint firstItem="z7c-1U-oKR" firstAttribute="leading" secondItem="9yW-pV-zb8" secondAttribute="leading" id="ykF-Gw-hsG"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8Vf-Kf-Giy" firstAttribute="trailing" secondItem="9yW-pV-zb8" secondAttribute="trailing" id="16g-Zh-Nnp"/>
+                            <constraint firstItem="8Vf-Kf-Giy" firstAttribute="bottom" secondItem="9yW-pV-zb8" secondAttribute="bottom" id="bkj-hp-QdV"/>
+                            <constraint firstItem="9yW-pV-zb8" firstAttribute="top" secondItem="Lid-TA-I75" secondAttribute="top" id="nmg-uE-gpp"/>
+                            <constraint firstItem="9yW-pV-zb8" firstAttribute="leading" secondItem="8Vf-Kf-Giy" secondAttribute="leading" id="oLs-g2-5qd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="8Vf-Kf-Giy"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" id="Hat-9Q-OBu"/>
+                    <tabBarItem key="tabBarItem" title="" image="FeedIcon" id="Hat-9Q-OBu">
+                        <color key="badgeColor" red="0.8862745098" green="0.47075000410000001" blue="0.49025431279999998" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="backgroundView" destination="9yW-pV-zb8" id="heJ-j0-cQC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sf1-7m-8Id" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,7 +209,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FeedIcon" width="30" height="30"/>
+        <image name="ForumIcon" width="33" height="31"/>
         <image name="Logo-1" width="807" height="588"/>
         <image name="Sign In With Google" width="404" height="85"/>
+        <image name="TrendingIcon" width="43" height="25"/>
     </resources>
 </document>
