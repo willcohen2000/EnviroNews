@@ -62,6 +62,9 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SDWebImage (4.2.2):
+    - SDWebImage/Core (= 4.2.2)
+  - SDWebImage/Core (4.2.2)
   - SwiftKeychainWrapper (3.0.1)
   - SwiftyJSON (4.0.0)
 
@@ -74,6 +77,7 @@ DEPENDENCIES:
   - GMStepper
   - GoogleSignIn
   - IQKeyboardManagerSwift
+  - SDWebImage
   - SwiftKeychainWrapper
   - SwiftyJSON
 
@@ -94,9 +98,10 @@ SPEC CHECKSUMS:
   IQKeyboardManagerSwift: 02bfbb0dff71c66d0ab77d80d25dfce0c3717735
   leveldb-library: 4f9eedf84ab46b4fa3b7893bf30714b2a1a74022
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SDWebImage: 89a9d32cd520bbb46eb14e541d5109b3564af198
   SwiftKeychainWrapper: 38952a3636320ae61bad3513cadd870929de7a4a
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
-PODFILE CHECKSUM: 4c78af0b90c5289fd61664422ebc8c0ab6b8e188
+PODFILE CHECKSUM: b1f29ee17011f587f5c7bc2098334a94d8df2db9
 
 COCOAPODS: 1.2.1

@@ -13,11 +13,17 @@ import Alamofire
 class MainNewsFeed: UIViewController {
 
     @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var newsFeedTableView: UITableView!
+    
+    var articles = [NewsArticle]();
+    var selectedArticle: NewsArticle!
     
     override func viewDidLoad() {
         super.viewDidLoad();
         backgroundView.backgroundColor = Colors.offWhiteColor;
         pullNewsArticles();
+        newsFeedTableView.delegate = self;
+        newsFeedTableView.dataSource = self;
     }
 
     private func pullNewsArticles() {
@@ -30,14 +36,63 @@ class MainNewsFeed: UIViewController {
                         let response = subJson.1;
                         let source = response["source"] as JSON;
                         guard let sourceName = source["name"].string else { return };
-                        print(response)
-                        print("============================")
+                        guard let imageURL = response["urlToImage"].string else { return };
+                        guard let date = response["publishedAt"].string else { return };
+                        guard let title = response["title"].string else { return };
+                        guard let description = response["description"].string else { return };
+                        guard let url = response["url"].string else { return };
+                        self.articles.append(NewsArticle(source: sourceName, title: title, description: description, URL: url, imageURL: imageURL, date: date));
                     }
                 } else {
-                    print("computer")
+                    print("Error");
                 }
+                self.newsFeedTableView.reloadData();
+                print("HELLLSO")
             }
         }
     }
 
 }
+
+extension MainNewsFeed: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedArticle = self.articles[indexPath.row];
+        self.performSegue(withIdentifier: "toArticle", sender: nil);
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
+    {
+        return 156.0;
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return articles.count;
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let article = articles[indexPath.row]
+        if let articleCell = newsFeedTableView.dequeueReusableCell(withIdentifier: "articleWithImage") as? NewsFeedCellWithImage {
+            articleCell.buildArticleCell(article: article);
+            return articleCell;
+        } else {
+            return NewsFeedCellWithImage()
+        }
+    }
+    
+}
+
+extension MainNewsFeed {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toArticle") {
+            if let articleVC = segue.destination as? ArticleController {
+                articleVC.articleURL = self.selectedArticle.URL;
+            }
+        }
+    }
+}
+
+
+
+
+

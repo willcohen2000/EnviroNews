@@ -17,6 +17,7 @@ target 'EnvironNews' do
   pod ‘GoogleSignIn’
   pod 'GMStepper'
   pod 'SwiftyJSON'
+  pod 'SDWebImage'
 
 
   target 'EnvironNewsTests' do
