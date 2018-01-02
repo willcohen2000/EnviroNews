@@ -107,14 +107,42 @@
                     <view key="view" contentMode="scaleToFill" id="Rjh-C0-8DC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vok-hF-SYU">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite Articles" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SM-5b-8xB">
+                                        <rect key="frame" x="5" y="25" width="365" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KrY-uc-gxf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="25"/>
+                                        <color key="textColor" red="0.99925250769999996" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.3930494189" green="0.68857157229999999" blue="0.47062841059999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="4SM-5b-8xB" secondAttribute="trailing" constant="5" id="fbQ-LS-PsA"/>
+                                    <constraint firstAttribute="height" constant="70" id="jqw-p1-GVT"/>
+                                    <constraint firstAttribute="bottom" secondItem="4SM-5b-8xB" secondAttribute="bottom" constant="5" id="n2z-CT-t6A"/>
+                                    <constraint firstItem="4SM-5b-8xB" firstAttribute="leading" secondItem="vok-hF-SYU" secondAttribute="leading" constant="5" id="zc0-0g-2WB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.85082769393920898" green="0.85523593425750732" blue="0.83139216899871826" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vok-hF-SYU" secondAttribute="trailing" id="BXw-UV-iRh"/>
+                            <constraint firstItem="vok-hF-SYU" firstAttribute="leading" secondItem="WDS-Ed-EC4" secondAttribute="leading" id="K2h-7q-sqg"/>
+                            <constraint firstItem="vok-hF-SYU" firstAttribute="top" secondItem="Rjh-C0-8DC" secondAttribute="top" id="g8v-uP-Yig"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="WDS-Ed-EC4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="TrendingIcon" id="Mhz-IJ-vP0"/>
+                    <tabBarItem key="tabBarItem" title="" image="FavoritesIcon" id="Mhz-IJ-vP0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AyI-xC-EDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="620" y="806"/>
+            <point key="canvasLocation" x="620" y="805.54722638680664"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="f3g-kq-3kA">
@@ -215,6 +243,45 @@
                                                     <outlet property="articleDescription" destination="zbV-hM-cuG" id="G5x-na-fKw"/>
                                                     <outlet property="articleImage" destination="IUE-lt-Mt1" id="Nij-TH-mJn"/>
                                                     <outlet property="articleTitle" destination="fhe-a8-lr5" id="97k-ct-9PM"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleSansImage" rowHeight="156" id="KbF-gV-C9B" customClass="NewsFeedSansImageCell" customModule="EnvironNews" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="184" width="375" height="156"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KbF-gV-C9B" id="ras-fB-NH6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="155.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Why is our earth warming?" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYX-E3-bed" customClass="VerticalTopAlignLabel" customModule="EnvironNews" customModuleProvider="target">
+                                                            <rect key="frame" x="10" y="11" width="352" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="sIo-X4-YVH"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                            <color key="textColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EK2-oU-58r" customClass="VerticalTopAlignLabel" customModule="EnvironNews" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="53" width="345" height="92"/>
+                                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                                            <color key="textColor" red="0.086274509799999996" green="0.086274509799999996" blue="0.090196078430000007" alpha="0.69927866179999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.85098039219999999" green="0.85490196080000003" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="EK2-oU-58r" secondAttribute="trailing" id="GH3-e8-slD"/>
+                                                        <constraint firstItem="xYX-E3-bed" firstAttribute="leading" secondItem="ras-fB-NH6" secondAttribute="leading" constant="10" id="J5e-NL-TjE"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="xYX-E3-bed" secondAttribute="trailing" constant="-2" id="SUG-Za-zF5"/>
+                                                        <constraint firstItem="EK2-oU-58r" firstAttribute="leading" secondItem="ras-fB-NH6" secondAttribute="leadingMargin" id="TtP-gk-eFq"/>
+                                                        <constraint firstItem="EK2-oU-58r" firstAttribute="top" secondItem="xYX-E3-bed" secondAttribute="bottom" constant="2" id="cxm-yT-XeX"/>
+                                                        <constraint firstItem="xYX-E3-bed" firstAttribute="top" secondItem="ras-fB-NH6" secondAttribute="topMargin" id="h3T-Dg-Qwn"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="EK2-oU-58r" secondAttribute="bottom" id="wfc-NS-81p"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="articleDescription" destination="EK2-oU-58r" id="cmh-ic-VMH"/>
+                                                    <outlet property="articleTitle" destination="xYX-E3-bed" id="irO-lP-i8f"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -346,10 +413,10 @@
     </scenes>
     <resources>
         <image name="Back" width="31" height="55"/>
+        <image name="FavoritesIcon" width="31" height="27"/>
         <image name="FeedIcon" width="30" height="30"/>
         <image name="ForumIcon" width="33" height="31"/>
         <image name="Logo-1" width="807" height="588"/>
         <image name="Sign In With Google" width="404" height="85"/>
-        <image name="TrendingIcon" width="43" height="25"/>
     </resources>
 </document>

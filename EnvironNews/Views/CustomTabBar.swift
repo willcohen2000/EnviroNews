@@ -21,11 +21,12 @@ class CustomTabBar: UITabBarController {
         super.viewDidLoad();
         
         (tabBar.items![0]).selectedImage = UIImage(named: "FeedIcon")?.withRenderingMode(.alwaysOriginal);
-        (tabBar.items![1]).selectedImage = UIImage(named: "TrendingIcon")?.withRenderingMode(.alwaysOriginal);
+        (tabBar.items![1]).selectedImage = UIImage(named: "FavoritesIcon")?.withRenderingMode(.alwaysOriginal);
         (tabBar.items![2]).selectedImage = UIImage(named: "ForumIcon")?.withRenderingMode(.alwaysOriginal);
         
         
-        tabBar.unselectedItemTintColor = UIColor.white;
+        tabBar.unselectedItemTintColor = Colors.offWhiteColor;
+        tabBar.selectedItem?.badgeColor = UIColor.white;
         tabBar.backgroundColor = Colors.centralGreenColor;
         //tabBar.barTintColor = UIColor.white;
         UITabBar.appearance().shadowImage = UIImage();
